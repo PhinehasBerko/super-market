@@ -20,7 +20,7 @@ import { getData } from "../api";
 
 // props
 import { ICategoryProps, IProductProps } from "../types";
-import { divide } from "lodash";
+// import { divide } from "lodash";
 import ProductCard from "./ProductCard";
 
 const navigationBar = [
@@ -72,7 +72,7 @@ const Header = () => {
     } catch (error) {
       console.error(error);
     }
-  }, [searchText]);
+  }, [products, searchText]);
   return (
     <div className="bg-whiteText md:sticky md:top-0 z-50 w-full">
       {/* two headers bArs */}

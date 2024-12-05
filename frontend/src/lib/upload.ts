@@ -3,11 +3,11 @@ import { storage } from "./firebase";
 
 
 
-const upload = async(file: any) =>{
+const upload = async(file: File) =>{
     const date = new Date();
     const storageRef = ref(storage,`images/${date + file.name}`);
-    const uploadTask = uploadBytesResumable(storageRef,file)
-    return new Promise((resolve,reject) =>{
+    const uploadTask = uploadBytesResumable(storageRef,file);
+    return new Promise<string>((resolve,reject) =>{
         uploadTask.on("state_changed",(snapshot) =>{
             const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             console.log('upload is ' + progress + "% done");
