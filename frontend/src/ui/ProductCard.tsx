@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 
 interface IProps {
   item: IProductProps;
-  setSearchText?: any;
+  setSearchText?: unknown;
 }
 const ProductCard = ({ item, setSearchText }: IProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +29,7 @@ const ProductCard = ({ item, setSearchText }: IProps) => {
   };
   const handleProduct = () => {
     navigator(`/product/${item?._id}`);
-    setSearchText && setSearchText("");
+    // searchText && setSearchText("");
   };
   const percentage =
     ((item?.regularPrice - item?.discountedPrice) / item?.regularPrice) * 100;
