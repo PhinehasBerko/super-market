@@ -114,7 +114,11 @@ const Header = () => {
             {filteredProducts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
                 {filteredProducts?.map((item: IProductProps) => (
-                  <ProductCard item={item} setSearchText={setsearchText} />
+                  <ProductCard
+                    key={item?._id}
+                    item={item}
+                    setSearchText={setsearchText}
+                  />
                 ))}
               </div>
             ) : (
@@ -172,6 +176,7 @@ const Header = () => {
                       className="flex w-full items-center gap-2 rounded-lg py-2 px-3 data-[focus]:bg-white/20 tracking-wide"
                     >
                       <img
+                        key={item?._id}
                         src={item?.image}
                         alt="categoryImage"
                         className="w-6 h-6 rounded-md"

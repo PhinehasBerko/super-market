@@ -5,7 +5,7 @@ import { config } from "../config";
 import { useParams } from "react-router-dom";
 import { getData } from "../api";
 import Loading from "../ui/Loading";
-import _, { values } from "lodash";
+import _ from "lodash";
 import PriceTag from "../ui/PriceTag";
 import { MdOutlineStarOutline } from "react-icons/md";
 import { FaRegEye } from "react-icons/fa";
