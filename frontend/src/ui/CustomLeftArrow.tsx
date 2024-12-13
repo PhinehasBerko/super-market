@@ -1,7 +1,7 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import { HiArrowLeft } from "react-icons/hi2";
 
-const CustomLeftArrow = ({ onClick }: any) => {
+const CustomLeftArrow = (onClick: MouseEventHandler<HTMLButtonElement>) => {
   return (
     <button
       onClick={onClick}
